@@ -80,4 +80,19 @@ public class BlockManager : MonoBehaviour
         lastBlock = temp;
         //
     }
+    public void LeaveLandedBlock()
+    {      
+
+        for(int i = 0; i < 2; i++) {
+
+            CreateNewBlock();
+        }
+      
+        if (catLandedBlock != null) {
+        //send a message to catlandedblock
+
+
+        
+        }
+    }
 }

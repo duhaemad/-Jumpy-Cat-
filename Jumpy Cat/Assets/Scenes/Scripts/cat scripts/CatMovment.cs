@@ -59,7 +59,7 @@ public class CatMovment : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, 180f, 0f);
             Vector3 pos = new Vector3(transform.position.x, transform.position.y, transform.position.z + 1f); //going forward in 3d is the z axis
             transform.DOJump(pos,height,1,speed);
-            //blockManager.LeaveLandedBlock();
+            blockManager.LeaveLandedBlock();
 
             anim.SetTrigger("jump");
         }
@@ -71,7 +71,7 @@ public class CatMovment : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             Vector3 pos = new Vector3(transform.position.x, transform.position.y, transform.position.z - 1f); //going forward in 3d is the z axis
             transform.DOJump(pos, height, 1, speed);
-            //blockManager.LeaveLandedBlock();
+            blockManager.LeaveLandedBlock();
 
             anim.SetTrigger("jump");
         }
@@ -83,7 +83,7 @@ public class CatMovment : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, -90f, 0f);
             Vector3 pos = new Vector3(transform.position.x + 1f, transform.position.y, transform.position.z ); //going forward in 3d is the z axis
             transform.DOJump(pos, height, 1, speed);
-            //blockManager.LeaveLandedBlock();
+            blockManager.LeaveLandedBlock();
 
             anim.SetTrigger("jump");
         }
@@ -95,7 +95,7 @@ public class CatMovment : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, 90f, 0f);
             Vector3 pos = new Vector3(transform.position.x - 1f, transform.position.y, transform.position.z); //going forward in 3d is the z axis
             transform.DOJump(pos, height, 1, speed);
-            //blockManager.LeaveLandedBlock();
+           blockManager.LeaveLandedBlock();
 
             anim.SetTrigger("jump");
         }
