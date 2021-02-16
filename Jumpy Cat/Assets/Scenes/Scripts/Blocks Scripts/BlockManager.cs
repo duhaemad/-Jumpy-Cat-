@@ -78,7 +78,10 @@ public class BlockManager : MonoBehaviour
         temp.transform.parent = transform;
         temp.name = "Stone";
         lastBlock = temp;
-        //
+        //----------------------------------------
+
+
+        temp.GetComponent<BlockScript>().moveLikeYoyo = true;
     }
     public void LeaveLandedBlock()
     {      
@@ -89,8 +92,8 @@ public class BlockManager : MonoBehaviour
         }
       
         if (catLandedBlock != null) {
-        //send a message to catlandedblock
-
+            //send a message to catlandedblock
+            catLandedBlock.SendMessage("FallBlock"); //any block i am moving from will disappear 
 
         
         }
